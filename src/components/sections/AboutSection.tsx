@@ -76,7 +76,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative scroll-mt-20 py-20 sm:py-32 lg:py-40 border-t border-[#E2E2DE] bg-[#F4F4F0]"
+      className="relative scroll-mt-20 py-20 sm:py-32 lg:py-40 border-t border-[#E2E2DE] bg-alabaster"
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         {/* Section Tag */}

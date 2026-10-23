@@ -148,7 +148,7 @@ export function HeroSection() {
               </Button>
 
               <Button
-                href="/resume.pdf"
+                href="/abrar_yeasir_resume.pdf"
                 variant="outline"
                 size="lg"
                 magnetic

@@ -9,7 +9,7 @@ import { Footer, Navbar } from "@/components/ui";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F4F4F0] text-[#1A1C20] selection:bg-[#E04D2D] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-alabaster text-[#1A1C20] selection:bg-[#E04D2D] selection:text-white">
       {/* 1. Navbar (Sticky & Dynamic) */}
       <Navbar />
 
