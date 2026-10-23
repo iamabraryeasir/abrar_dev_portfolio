@@ -18,10 +18,16 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://abraryeasir.vercel.app");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://abraryeasir.dev",
-  ),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Abrar Yeasir | Full-Stack AI & Software Engineer",
     template: "%s | Abrar Yeasir",
@@ -35,7 +41,7 @@ export const metadata: Metadata = {
     title: "Abrar Yeasir | Full-Stack AI & Software Engineer",
     description:
       "Editorial portfolio of Abrar Yeasir. Blending typographic craftsmanship with high-performance Next.js full-stack architecture, backend systems, and autonomous AI agents.",
-    url: "https://abraryeasir.dev",
+    url: siteUrl,
     siteName: "Abrar Yeasir Portfolio",
     images: [
       {
@@ -43,6 +49,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Abrar Yeasir | Full-Stack AI & Software Engineer",
+        type: "image/png",
       },
     ],
     locale: "en_US",
