@@ -19,11 +19,41 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Abrar Yeasir | Senior Full-Stack Engineer & UI/UX Implementer",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://abraryeasir.dev",
+  ),
+  title: {
+    default: "Abrar Yeasir | Full-Stack AI & Software Engineer",
+    template: "%s | Abrar Yeasir",
+  },
   description:
-    "Editorial portfolio of Abrar Yeasir. Blending typographic editorial craftsmanship with high-performance Next.js full-stack engineering.",
+    "Editorial portfolio of Abrar Yeasir. Blending typographic craftsmanship with high-performance Next.js full-stack architecture, backend systems, and autonomous AI agents.",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Abrar Yeasir | Full-Stack AI & Software Engineer",
+    description:
+      "Editorial portfolio of Abrar Yeasir. Blending typographic craftsmanship with high-performance Next.js full-stack architecture, backend systems, and autonomous AI agents.",
+    url: "https://abraryeasir.dev",
+    siteName: "Abrar Yeasir Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Abrar Yeasir | Full-Stack AI & Software Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abrar Yeasir | Full-Stack AI & Software Engineer",
+    description:
+      "Editorial portfolio of Abrar Yeasir. Blending typographic craftsmanship with high-performance Next.js full-stack architecture, backend systems, and autonomous AI agents.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -37,7 +67,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
     >
-      <body className="bg-[#F4F4F0] text-[#1A1C20] min-h-screen flex flex-col font-sans selection:bg-[#E04D2D] selection:text-white">
+      <body className="bg-alabaster text-[#1A1C20] min-h-screen flex flex-col font-sans selection:bg-[#E04D2D] selection:text-white">
         {children}
       </body>
     </html>
